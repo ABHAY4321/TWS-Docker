@@ -23,7 +23,7 @@ services:
       MYSQL_PASSWORD: devops
     volumes:
       - ./message.sql:/docker-entrypoint-initdb.d/message.sql   # Mount sql script into container's /docker-entrypoint-initdb.d directory
-      - mysql-data:/var/lib/mysql  # Mount the volume for MySQL data storage
+      - mysql-data:/var/lib/mysql  # Mount the volume for MySQL data storage. Make sure "mysql-data" volume shouldn't exist already. Check by "docker volume ls".
 
 volumes:
   mysql-data:
