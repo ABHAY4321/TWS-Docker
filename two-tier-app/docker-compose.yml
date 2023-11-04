@@ -27,3 +27,5 @@ services:
 
 volumes:
   mysql-data:
+
+# If mysql container is exiting automatically, or getting access denied error while accessing webpage due to db connection issue, Make sure "mysql-data" volume shouldn't exist already. Check by "docker volume ls".
